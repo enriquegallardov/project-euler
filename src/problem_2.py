@@ -10,13 +10,13 @@ four million, find the sum of the even-valued terms.
 """
 
 
-def sum_of_fibonacci_multiples_until(n, factor):
-    fibonacci = [1, 2]
+def sum_of_even_fibonacci_members_until(n):
+    even_fibonnaci = [2, 8]
 
-    while fibonacci[-1] < n:
-        fibonacci.append(fibonacci[-1] + fibonacci[-2])
+    while even_fibonnaci[-1] < n:
+        even_fibonnaci.append(even_fibonnaci[-1] * 4 + even_fibonnaci[-2])
 
-    return (sum(x for x in fibonacci if x % factor == 0))
+    return sum(even_fibonnaci) - even_fibonnaci[-1]
 
 
-print(sum_of_fibonacci_multiples_until(4000000, 2))
+print(sum_of_even_fibonacci_members_until(4000000))

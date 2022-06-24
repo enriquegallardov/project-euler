@@ -6,9 +6,10 @@ multiples of 3 or 5 below 1000.
 """
 
 
-def sum_of_multiples_below(n, factors):
-    return sum(x for x in range(n) if x %
-               factors[0] == 0 or x % factors[1] == 0)
+def sum_of_multiples_below(n, factor):
+    p = (n - 1) // factor
+    return factor * (p * (p + 1)) // 2
 
 
-print(sum_of_multiples_below(1000, [3, 5]))
+print(sum_of_multiples_below(1000, 3) +
+      sum_of_multiples_below(1000, 5) - sum_of_multiples_below(1000, 15))

@@ -6,13 +6,35 @@ palindrome made from the product of two 3-digit numbers.
 """
 
 
+def is_palindromic(n):
+    m = n
+    reversed = 0
+    while n > 0:
+        reversed = (reversed * 10) + (n % 10)
+        n //= 10
+    return m == reversed
+
+
 def largest_palindrome_from_triple_digit_product():
     largest_palindrome = 0
-    for i in range(100, 1000):
-        for j in range(100, 1000):
-            product = i * j
-            if int(str(product)[::-1]) == product and product > largest_palindrome:
-                largest_palindrome = product
+    i = 999
+    while i >= 100:
+        if i % 11 == 0:
+            j = 999
+            k = 1
+        else:
+            j = 990
+            k = 11
+
+        while j >= i:
+            if i * j <= largest_palindrome:
+                break
+            if is_palindromic(i * j):
+                largest_palindrome = i * j
+
+            j -= k
+
+        i -= 1
 
     return largest_palindrome
 

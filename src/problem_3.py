@@ -5,17 +5,32 @@ factor of the number 600851475143 ?
 """
 
 
+from math import sqrt
+
+
 def largest_prime_factor(n):
-    factors = []
-    factor = 2
-    while n > 1:
+    if n % 2 == 0:
+        last_factor = 2
+        n /= 2
+        while n % 2 == 0:
+            n /= 2
+    else:
+        last_factor = 1
+
+    factor = 3
+    max_factor = sqrt(n)
+    while n > 1 and factor <= max_factor:
         if n % factor == 0:
-            factors.append(factor)
             n /= factor
-        else:
-            factor += 1
-    print(factors)
-    return factors[-1]
+            last_factor = factor
+            while n % factor == 0:
+                n /= factor
+            max_factor = sqrt(n)
+        factor += 2
+    if n == 1:
+        return int(last_factor)
+    else:
+        return int(n)
 
 
 print(largest_prime_factor(600851475143))
