@@ -31,7 +31,7 @@ Python solutions for [Project Euler](https://projecteuler.net/) problems
 - **Solution**: $906609$
 - **Naive**: No
 - **Path**: `solutions/problem_004.py`
-- **Time**: 840&nbsp;µs (100, 000 runs)
+- **Time**: 840&nbsp;µs (100,000 runs)
 - **Memory**: 0.00&nbsp;MiB
 
 #### Problem 5: Smallest multiple
@@ -41,3 +41,19 @@ Python solutions for [Project Euler](https://projecteuler.net/) problems
 - **Path**: `solutions/problem_005.py`
 - **Time**: 11.7&nbsp;s (10 runs)
 - **Memory**: 0.01&nbsp;MiB
+
+#### Problem 6: Sum square difference
+
+- **Solution**: $25164150$
+- **Naive**: No
+- **Path**: `solutions/problem_006.py`
+- **Time**: 920&nbsp;ns (1,000,000 runs)
+- **Memory**: 0.01&nbsp;MiB
+
+#### Problem 7: 10001st prime
+
+- **Solution**: $104743$
+- **Naive**: No
+- **Path**: `solutions/problem_007.py`
+- **Time**: 155&nbsp;ms (1000 runs)
+- **Memory**: 0.07&nbsp;MiB
