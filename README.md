@@ -1,2 +1,3 @@
 # project-euler
-Python solutions for Project Euler
+
+(Naive) Python solutions for Project Euler problems
